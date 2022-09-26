@@ -451,21 +451,31 @@ var main = new function() {
       e.stopPropagation();
 
       let menuItems = [
+        {html: 'Spike Prime Mode', line: false, callback: self.switchToSpikePrime},
         {html: 'Ev3dev Mode', line: false, callback: self.switchToEv3dev},
         {html: 'Pybricks Mode', line: true, callback: self.switchToPybricks},
         {html: 'Zoom In', line: false, callback: pythonPanel.zoomIn},
         {html: 'Zoom Out', line: false, callback: pythonPanel.zoomOut},
         {html: 'Reset Zoom', line: false, callback: pythonPanel.zoomReset},
       ];
-      var tickIndex;
+      var tickIndex =0;
       if (blockly.generator == ev3dev2_generator) {
-        tickIndex = 0;
-      } else if (blockly.generator == pybricks_generator) {
         tickIndex = 1;
+      } else if (blockly.generator == pybricks_generator) {
+        tickIndex = 2;
       }
       menuItems[tickIndex].html = '<span class="tick">&#x2713;</span> ' + menuItems[tickIndex].html;
 
       menuDropDown(self.$pythonMenu, menuItems, {className: 'pythonMenuDropDown'});
+    }
+  };
+
+  // switch to ev3dev
+  this.switchToSpikePrime = function() {
+    blockly.generator = spikeprime_generator;
+    blockly.generator.load();
+    if (! pythonPanel.modified) {
+      pythonPanel.loadPythonFromBlockly();
     }
   };
 
