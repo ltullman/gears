@@ -211,6 +211,7 @@ var $builtinmodule = function(name) {
     $loc.__init__ = new Sk.builtin.func(function(self, address) {
       self.sensor = robot.getComponentByPort(address.v);
       if (!self.sensor || self.sensor.type != 'GyroSensor') {
+        console.log("self.sensor:", self.sensor);
         throw new Sk.builtin.TypeError('No gyro sensor connected to ' + String(address.v));
       }
     });

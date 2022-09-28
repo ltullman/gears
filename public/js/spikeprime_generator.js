@@ -74,12 +74,9 @@ var spikeprime_generator = new function() {
       '# Import the necessary libraries\n' +
       'import time\n' +
       'import math\n' +
-      'from spike.motor import *\n' +
-      'from spike.sound import Sound\n' +
-      'from spike.button import Button\n' +
-      'from spike.sensor import *\n' +
-      'from spike.sensor.lego import *\n' +
-      'from spike.sensor.virtual import *\n' +
+      'from spike import *\n' +
+      'from spike.control import *\n' +
+      'from spike.operator import *\n' +
       '\n' +
       '# Create the sensors and motors objects\n' +
       wheelCode +
