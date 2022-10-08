@@ -217,11 +217,11 @@ i18n.append({
   '#robot-paintballLong#': {
     en:
       '<p>This robot is similar to the double sensor line follower, but with the addition of a paintball launcher mounted on an motorized arm. ' +
-      'The ultrasonic distance sensor is also replaced with a long range (5m) laser range sensor.</p>'  +
+      'The ultrasonic distance sensor is also replaced with a long range (5m) laser range sensor.</p>' +
       '<p>Read the <a href="https://github.com/QuirkyCort/gears/wiki/Paintball-Launcher" target="_blank">Paintball Launcher documentations</a> to learn how to launch a paintball.</p>',
     fr:
       '<p>Ce robot est identique au suiveur de ligne à deux capteurs, avec en plus un bras motorisé équipé d\'un lanceur de paintball.' +
-      'Le télémètre à ultrasons est remplacé par un télémètre laser de plus grande portée (5m).</p>'  +
+      'Le télémètre à ultrasons est remplacé par un télémètre laser de plus grande portée (5m).</p>' +
       '<p>Lire la <a href="https://github.com/QuirkyCort/gears/wiki/Paintball-Launcher" target="_blank">documentation du lanceur de paintball</a> pour apprendre à l\'utiliser.</p>',
     de:
       '<p>Dieser Roboter ähnelt dem Doppelsensor Linienverfolger, aber mit einem extra Paintball-Launcher auf einem motorisiertem Arm. ' +
@@ -229,7 +229,7 @@ i18n.append({
       '<p>Lese die <a href="https://github.com/QuirkyCort/gears/wiki/Paintball-Launcher" target="_blank">Paintball-Launcher-Dokumentationen</a> um zu lernen wie man ein Paintball schießt.</p>',
     nl:
       '<p>Deze robot is vergelijkbaar met de dubbele sensor lijnvolger, maar met de toevoeging van een paintball kanon, gemonteerd op een gemotoriseerde arm. ' +
-      'De ultrasonische afstandsensor is ook vervangen door een lange afstand (5m) laser afstandsensor.</p>'  +
+      'De ultrasonische afstandsensor is ook vervangen door een lange afstand (5m) laser afstandsensor.</p>' +
       '<p>Lees de <a href="https://github.com/QuirkyCort/gears/wiki/Paintball-Launcher" target="_blank">Paintball kanon documentatie</a> om te leren hoe een paintball te lanceren.</p>',
   },
   '#robot-mazeShort#': {
@@ -307,10 +307,10 @@ i18n.append({
       'and a color sensor at the end of the arm allows it to identify what it is picking up.</p>' +
       '<p>When using this robot, fold the arms to avoid obstructing the ultrasonic sensor.</p>',
     fr:
-    '<p>Ce robot est équipé d\'un électro-aimant au bout d\'un bras de grue à deux segments.</p>' +
-    '<p>Il peut aller plus haut et plus loin que les autres robots, ' +
-    'et un capteur de couleur à l\'extrémité du bras lui permet d\'identifier ce qu\'il prend.</p>' +
-    '<p>Lorsque vous utilisez ce robot, repliez le bras pour éviter d\'obstruer le télémètre à ultrasons.</p>',
+      '<p>Ce robot est équipé d\'un électro-aimant au bout d\'un bras de grue à deux segments.</p>' +
+      '<p>Il peut aller plus haut et plus loin que les autres robots, ' +
+      'et un capteur de couleur à l\'extrémité du bras lui permet d\'identifier ce qu\'il prend.</p>' +
+      '<p>Lorsque vous utilisez ce robot, repliez le bras pour éviter d\'obstruer le télémètre à ultrasons.</p>',
     de:
       '<p>Dieser Roboter ist mit einem Elektromagnet am Ende von einem zwei-Segmente-Kranarm befestigt.</p>' +
       '<p>Er kann höher und weiter reichen als die anderen Roboter ' +
@@ -352,22 +352,22 @@ var robotTemplates = [
     longerDescription:
       '<h3>#robot-dimensions#</h3>' +
       '<ul>' +
-        '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
-        '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
+      '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
+      '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
       '</ul>' +
       '<h3>#robot-actuators#</h3>' +
       '<ul>' +
-        '<li>#robot-port# A : #robot-leftWheel#</li>' +
-        '<li>#robot-port# B : #robot-rightWheel#</li>' +
-        '<li>#robot-port# C : #robot-electromagnet#</li>' +
+      '<li>#robot-port# A : #robot-leftWheel#</li>' +
+      '<li>#robot-port# B : #robot-rightWheel#</li>' +
+      '<li>#robot-port# C : #robot-electromagnet#</li>' +
       '</ul>' +
       '<h3>#robot-sensors#</h3>' +
       '<ul>' +
-        '<li>#robot-port# 1 : #robot-color#</li>' +
-        '<li>#robot-port# 2 : #robot-ultrasonic#</li>' +
-        '<li>#robot-port# 3 : #robot-gyro#</li>' +
-        '<li>#robot-port# 4 : GPS</li>' +
-        '<li>#robot-port# 5 : Pen</li>' +
+      '<li>#robot-port# 1 : #robot-color#</li>' +
+      '<li>#robot-port# 2 : #robot-ultrasonic#</li>' +
+      '<li>#robot-port# 3 : #robot-gyro#</li>' +
+      '<li>#robot-port# 4 : GPS</li>' +
+      '<li>#robot-port# 5 : Pen</li>' +
       '</ul>',
     thumbnail: 'images/robots/singleFollower.jpg',
 
@@ -400,7 +400,7 @@ var robotTemplates = [
       {
         type: 'ColorSensor',
         position: [0, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
@@ -434,28 +434,529 @@ var robotTemplates = [
     ]
   },
   {
+    "name": "spiketrainer1",
+    "creator": "By David D. - EMS Robotics",
+    "FLL Team": "54890 The Electric Eagles",
+    "shortDescription": "spiketrainer1",
+    "longDescription": "<p>Custom robot created in the configurator.</p>",
+    "longerDescription": "<h3>#robot-dimensions#</h3><ul><li>#robot-wheelDiameter#: 5.6 cm</li><li>#robot-wheelSpacing#: 11.3 cm</li></ul><h3>#robot-actuators#</h3><ul><li>#robot-port# A : #robot-leftWheel#</li><li>#robot-port# B : #robot-rightWheel#</li><li>#robot-port# C : #robot-swivel#</li></ul><h3>#robot-sensors#</h3><ul><li>#robot-port# 1 : #robot-gyro#</li></ul>",
+    "thumbnail": "",
+    "bodyHeight": 2.2,
+    "bodyWidth": 5.5,
+    "bodyLength": 8.7,
+    "wheels": true,
+    "wheelDiameter": 5.6,
+    "wheelWidth": 1.4,
+    "wheelToBodyOffset": 2.2,
+    "bodyEdgeToWheelCenterY": -1,
+    "bodyEdgeToWheelCenterZ": 2.7,
+    "bodyMass": 1000,
+    "wheelMass": 200,
+    "casterMass": 0,
+    "caster": true,
+    "wheelFriction": 10,
+    "bodyFriction": 0,
+    "casterFriction": 0,
+    "color": "#e0cc2bff",
+    "imageType": "none",
+    "imageURL": "textures/box/cardboard.png",
+    "components": [
+
+      {
+        type: 'ColorSensor',
+        position: [0, -1, 9],
+        rotation: [Math.PI / 2, 0, 0],
+        options: null
+      },
+      {
+        type: 'UltrasonicSensor',
+        position: [0, 2.5, 8],
+        rotation: [0, 0, 0],
+        options: null
+      },
+      {
+        type: 'GyroSensor',
+        position: [0, 2.5, 2.5],
+        options: null
+      },
+      {
+        type: 'GPSSensor',
+        position: [0, 2.5, 5],
+        options: null
+      },
+      {
+        type: 'MagnetActuator',
+        position: [0, -1, 3],
+        rotation: [0, 0, 0],
+        options: null
+      },
+      {
+        type: 'Pen',
+        position: [0, 0, 6],
+        rotation: [0, 0, 0],
+        options: null
+      }
+      ,
+      {
+        "type": "Box",
+        "position": [
+          0.0021080159259070363,
+          -2.1815800311092053,
+          -4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 2.2,
+          "width": 0.7,
+          "depth": 4,
+          "color": "#4bb0ccff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          0,
+          1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 0.7,
+          "width": 5.5,
+          "depth": 8.7,
+          "color": "#ffffffff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Sphere",
+        "position": [
+          0,
+          -3.317545386776148,
+          -4.173774712197158
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "diameter": 2.2,
+          "color": "#439fb7ff",
+          "imageType": "sphere",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          3.2,
+          -2.2,
+          1.16
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 2.3,
+          "width": 2.3,
+          "depth": 3.1,
+          "color": "#ffffffff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          -3.2,
+          -2.2,
+          1.16
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 2.3,
+          "width": 2.3,
+          "depth": 3.1,
+          "color": "#ffffffff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          3.2,
+          -2.2,
+          -2.3
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 2.3,
+          "width": 2.3,
+          "depth": 4,
+          "color": "#378696ff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          -3.2,
+          -2.2,
+          -2.3
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 2.3,
+          "width": 2.3,
+          "depth": 4,
+          "color": "#378696ff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          4,
+          -0.7,
+          1.6
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 0.8,
+          "width": 0.7,
+          "depth": 11.9,
+          "color": "#000000ff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          -4,
+          -0.7,
+          1.6
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 0.8,
+          "width": 0.7,
+          "depth": 11.9,
+          "color": "#000000ff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Cylinder",
+        "position": [
+          4.7,
+          -2.2,
+          1.7
+        ],
+        "rotation": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "options": {
+          "height": 0.5,
+          "diameter": 2.2,
+          "color": "#ffffffff",
+          "imageType": "cylinder",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Cylinder",
+        "position": [
+          -4.7,
+          -2.2,
+          1.7
+        ],
+        "rotation": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "options": {
+          "height": 0.5,
+          "diameter": 2.2,
+          "color": "#ffffffff",
+          "imageType": "cylinder",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          0,
+          -2.2,
+          4.8
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 2.3,
+          "width": 3.9,
+          "depth": 3.1,
+          "color": "#ffffffff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          0,
+          -2.2,
+          1.4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 2.3,
+          "width": 3.9,
+          "depth": 3.8,
+          "color": "#3a8999ff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          -4.043131722476829,
+          -3.8,
+          -0.1372918025710539
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 0.8,
+          "width": 0.7,
+          "depth": 5.5,
+          "color": "#b41a7cff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          4.025411475441057,
+          -3.8,
+          -0.09809716733236762
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 0.8,
+          "width": 0.7,
+          "depth": 5.5,
+          "color": "#b41a7cff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          -0.07329735048516284,
+          -3.8,
+          -2.558060112541523
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 0.8,
+          "width": 8.7,
+          "depth": 0.7,
+          "color": "#b41a7cff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          0.01549519705194946,
+          -3.8,
+          2.254813924410854
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 0.8,
+          "width": 8.7,
+          "depth": 0.7,
+          "color": "#b41a7cff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "Box",
+        "position": [
+          0,
+          -1.5,
+          -4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "options": {
+          "height": 0.7,
+          "width": 2.2,
+          "depth": 2.2,
+          "color": "#b41a7cff",
+          "imageType": "repeat",
+          "imageURL": "",
+          "uScale": 1,
+          "vScale": 1
+        }
+      },
+      {
+        "type": "SwivelActuator",
+        "position": [
+          0,
+          -1.5,
+          5.3
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "components": [],
+        "options": {
+          "mass": 100,
+          "baseColor": "#ffffffff",
+          "platformColor": "#000000ff",
+          "width": 1.2,
+          "restitution": 0.4,
+          "friction": 0.1
+        }
+      }
+    ],
+    "options": {},
+    "casterDiameter": 1.8,
+    "casterOffsetZ": -0.7
+  },
+  {
     name: 'doubleFollower',
     shortDescription: '#robot-doubleFollowerShort#',
     longDescription: '#robot-doubleFollowerLong#',
     longerDescription:
       '<h3>#robot-dimensions#</h3>' +
       '<ul>' +
-        '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
-        '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
+      '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
+      '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
       '</ul>' +
       '<h3>#robot-actuators#</h3>' +
       '<ul>' +
-        '<li>#robot-port# A : #robot-leftWheel#</li>' +
-        '<li>#robot-port# B : #robot-rightWheel#</li>' +
-        '<li>#robot-port# C : #robot-electromagnet#</li>' +
+      '<li>#robot-port# A : #robot-leftWheel#</li>' +
+      '<li>#robot-port# B : #robot-rightWheel#</li>' +
+      '<li>#robot-port# C : #robot-electromagnet#</li>' +
       '</ul>' +
       '<h3>#robot-sensors#</h3>' +
       '<ul>' +
-        '<li>#robot-port# 1 : #robot-color# (#robot-left#)</li>' +
-        '<li>#robot-port# 2 : #robot-color# (#robot-right#)</li>' +
-        '<li>#robot-port# 3 : #robot-ultrasonic#</li>' +
-        '<li>#robot-port# 4 : #robot-gyro#</li>' +
-        '<li>#robot-port# 5 : GPS</li>' +
+      '<li>#robot-port# 1 : #robot-color# (#robot-left#)</li>' +
+      '<li>#robot-port# 2 : #robot-color# (#robot-right#)</li>' +
+      '<li>#robot-port# 3 : #robot-ultrasonic#</li>' +
+      '<li>#robot-port# 4 : #robot-gyro#</li>' +
+      '<li>#robot-port# 5 : GPS</li>' +
       '</ul>',
     thumbnail: 'images/robots/doubleFollower.jpg',
 
@@ -488,13 +989,13 @@ var robotTemplates = [
       {
         type: 'ColorSensor',
         position: [-2, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
         type: 'ColorSensor',
         position: [2, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
@@ -528,24 +1029,24 @@ var robotTemplates = [
     longerDescription:
       '<h3>#robot-dimensions#</h3>' +
       '<ul>' +
-        '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
-        '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
+      '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
+      '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
       '</ul>' +
       '<h3>#robot-actuators#</h3>' +
       '<ul>' +
-        '<li>#robot-port# A : #robot-leftWheel#</li>' +
-        '<li>#robot-port# B : #robot-rightWheel#</li>' +
-        '<li>#robot-port# C : #robot-electromagnet#</li>' +
-        '<li>#robot-port# D : #robot-motorizedArm#</li>' +
-        '<li>#robot-port# E : #robot-paintball#</li>' +
+      '<li>#robot-port# A : #robot-leftWheel#</li>' +
+      '<li>#robot-port# B : #robot-rightWheel#</li>' +
+      '<li>#robot-port# C : #robot-electromagnet#</li>' +
+      '<li>#robot-port# D : #robot-motorizedArm#</li>' +
+      '<li>#robot-port# E : #robot-paintball#</li>' +
       '</ul>' +
       '<h3>#robot-sensors#</h3>' +
       '<ul>' +
-        '<li>#robot-port# 1 : #robot-color# (#robot-left#)</li>' +
-        '<li>#robot-port# 2 : #robot-color# (#robot-right#)</li>' +
-        '<li>#robot-port# 3 : #robot-laser#</li>' +
-        '<li>#robot-port# 4 : #robot-gyro#</li>' +
-        '<li>#robot-port# 5 : GPS</li>' +
+      '<li>#robot-port# 1 : #robot-color# (#robot-left#)</li>' +
+      '<li>#robot-port# 2 : #robot-color# (#robot-right#)</li>' +
+      '<li>#robot-port# 3 : #robot-laser#</li>' +
+      '<li>#robot-port# 4 : #robot-gyro#</li>' +
+      '<li>#robot-port# 5 : GPS</li>' +
       '</ul>',
     thumbnail: 'images/robots/paintball.jpg',
 
@@ -578,19 +1079,19 @@ var robotTemplates = [
       {
         type: 'ColorSensor',
         position: [-2, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
         type: 'ColorSensor',
         position: [2, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
         type: 'LaserRangeSensor',
         position: [0, 2.5, 7.5],
-        rotation: [-Math.PI/2, 0, 0],
+        rotation: [-Math.PI / 2, 0, 0],
         options: {
           rayLength: 500
         }
@@ -637,22 +1138,22 @@ var robotTemplates = [
     longerDescription:
       '<h3>#robot-dimensions#</h3>' +
       '<ul>' +
-        '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
-        '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
+      '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
+      '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
       '</ul>' +
       '<h3>#robot-actuators#</h3>' +
       '<ul>' +
-        '<li>#robot-port# A : #robot-leftWheel#</li>' +
-        '<li>#robot-port# B : #robot-rightWheel#</li>' +
-        '<li>#robot-port# C : #robot-electromagnet#</li>' +
+      '<li>#robot-port# A : #robot-leftWheel#</li>' +
+      '<li>#robot-port# B : #robot-rightWheel#</li>' +
+      '<li>#robot-port# C : #robot-electromagnet#</li>' +
       '</ul>' +
       '<h3>#robot-sensors#</h3>' +
       '<ul>' +
-        '<li>#robot-port# 1 : #robot-color#</li>' +
-        '<li>#robot-port# 2 : #robot-ultrasonic# (#robot-front#)</li>' +
-        '<li>#robot-port# 3 : #robot-ultrasonic# (#robot-left#)</li>' +
-        '<li>#robot-port# 4 : #robot-ultrasonic# (#robot-right#)</li>' +
-        '<li>#robot-port# 5 : #robot-gyro#</li>' +
+      '<li>#robot-port# 1 : #robot-color#</li>' +
+      '<li>#robot-port# 2 : #robot-ultrasonic# (#robot-front#)</li>' +
+      '<li>#robot-port# 3 : #robot-ultrasonic# (#robot-left#)</li>' +
+      '<li>#robot-port# 4 : #robot-ultrasonic# (#robot-right#)</li>' +
+      '<li>#robot-port# 5 : #robot-gyro#</li>' +
       '</ul>',
     thumbnail: 'images/robots/maze.jpg',
 
@@ -685,7 +1186,7 @@ var robotTemplates = [
       {
         type: 'ColorSensor',
         position: [0, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
@@ -697,13 +1198,13 @@ var robotTemplates = [
       {
         type: 'UltrasonicSensor',
         position: [-6, 3, 4],
-        rotation: [0, -Math.PI/2, 0],
+        rotation: [0, -Math.PI / 2, 0],
         options: null
       },
       {
         type: 'UltrasonicSensor',
         position: [6, 3, 4],
-        rotation: [0, Math.PI/2, 0],
+        rotation: [0, Math.PI / 2, 0],
         options: null
       },
       {
@@ -746,22 +1247,22 @@ var robotTemplates = [
     longerDescription:
       '<h3>#robot-dimensions#</h3>' +
       '<ul>' +
-        '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
-        '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
+      '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
+      '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
       '</ul>' +
       '<h3>#robot-actuators#</h3>' +
       '<ul>' +
-        '<li>#robot-port# A : #robot-leftWheel#</li>' +
-        '<li>#robot-port# B : #robot-rightWheel#</li>' +
-        '<li>#robot-port# C : #robot-electromagnet#</li>' +
-        '<li>#robot-port# D : #robot-swivel#</li>' +
+      '<li>#robot-port# A : #robot-leftWheel#</li>' +
+      '<li>#robot-port# B : #robot-rightWheel#</li>' +
+      '<li>#robot-port# C : #robot-electromagnet#</li>' +
+      '<li>#robot-port# D : #robot-swivel#</li>' +
       '</ul>' +
       '<h3>#robot-sensors#</h3>' +
       '<ul>' +
-        '<li>#robot-port# 1 : #robot-color#</li>' +
-        '<li>#robot-port# 2 : #robot-gyro#</li>' +
-        '<li>#robot-port# 3 : #robot-laser#</li>' +
-        '<li>#robot-port# 4 : #robot-color# (#robot-swivel#)</li>' +
+      '<li>#robot-port# 1 : #robot-color#</li>' +
+      '<li>#robot-port# 2 : #robot-gyro#</li>' +
+      '<li>#robot-port# 3 : #robot-laser#</li>' +
+      '<li>#robot-port# 4 : #robot-color# (#robot-swivel#)</li>' +
       '</ul>',
     thumbnail: 'images/robots/maze2.jpg',
 
@@ -794,7 +1295,7 @@ var robotTemplates = [
       {
         type: 'ColorSensor',
         position: [0, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
@@ -837,7 +1338,7 @@ var robotTemplates = [
           {
             type: 'LaserRangeSensor',
             position: [-0.75, 1, 0],
-            rotation: [-Math.PI/2, 0, 0],
+            rotation: [-Math.PI / 2, 0, 0],
             options: null
           },
           {
@@ -860,22 +1361,22 @@ var robotTemplates = [
     longerDescription:
       '<h3>#robot-dimensions#</h3>' +
       '<ul>' +
-        '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
-        '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
+      '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
+      '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
       '</ul>' +
       '<h3>#robot-actuators#</h3>' +
       '<ul>' +
-        '<li>#robot-port# A : #robot-leftWheel#</li>' +
-        '<li>#robot-port# B : #robot-rightWheel#</li>' +
-        '<li>#robot-port# C : #robot-motorizedArm#</li>' +
-        '<li>#robot-port# D : #robot-electromagnet#</li>' +
+      '<li>#robot-port# A : #robot-leftWheel#</li>' +
+      '<li>#robot-port# B : #robot-rightWheel#</li>' +
+      '<li>#robot-port# C : #robot-motorizedArm#</li>' +
+      '<li>#robot-port# D : #robot-electromagnet#</li>' +
       '</ul>' +
       '<h3>#robot-sensors#</h3>' +
       '<ul>' +
-        '<li>#robot-port# 1 : #robot-color# (#robot-left#)</li>' +
-        '<li>#robot-port# 2 : #robot-color# (#robot-right#)</li>' +
-        '<li>#robot-port# 3 : #robot-ultrasonic#</li>' +
-        '<li>#robot-port# 4 : #robot-gyro#</li>' +
+      '<li>#robot-port# 1 : #robot-color# (#robot-left#)</li>' +
+      '<li>#robot-port# 2 : #robot-color# (#robot-right#)</li>' +
+      '<li>#robot-port# 3 : #robot-ultrasonic#</li>' +
+      '<li>#robot-port# 4 : #robot-gyro#</li>' +
       '</ul>',
     thumbnail: 'images/robots/tow.jpg',
 
@@ -908,13 +1409,13 @@ var robotTemplates = [
       {
         type: 'ColorSensor',
         position: [-2, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
         type: 'ColorSensor',
         position: [2, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
@@ -971,24 +1472,24 @@ var robotTemplates = [
     longerDescription:
       '<h3>#robot-dimensions#</h3>' +
       '<ul>' +
-        '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
-        '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
+      '<li>#robot-wheelDiameter#: 5.6 cm</li>' +
+      '<li>#robot-wheelSpacing#: 15.2 cm</li>' +
       '</ul>' +
       '<h3>#robot-actuators#</h3>' +
       '<ul>' +
-        '<li>#robot-port# A : #robot-leftWheel#</li>' +
-        '<li>#robot-port# B : #robot-rightWheel#</li>' +
-        '<li>#robot-port# C : #robot-motorizedArm# 1</li>' +
-        '<li>#robot-port# D : #robot-motorizedArm# 2</li>' +
-        '<li>#robot-port# E : #robot-electromagnet#</li>' +
+      '<li>#robot-port# A : #robot-leftWheel#</li>' +
+      '<li>#robot-port# B : #robot-rightWheel#</li>' +
+      '<li>#robot-port# C : #robot-motorizedArm# 1</li>' +
+      '<li>#robot-port# D : #robot-motorizedArm# 2</li>' +
+      '<li>#robot-port# E : #robot-electromagnet#</li>' +
       '</ul>' +
       '<h3>#robot-sensors#</h3>' +
       '<ul>' +
-        '<li>#robot-port# 1 : #robot-color# (#robot-left#)</li>' +
-        '<li>#robot-port# 2 : #robot-color# (#robot-right#)</li>' +
-        '<li>#robot-port# 3 : #robot-ultrasonic#</li>' +
-        '<li>#robot-port# 4 : #robot-gyro#</li>' +
-        '<li>#robot-port# 5 : #robot-color# (#robot-arm#)</li>' +
+      '<li>#robot-port# 1 : #robot-color# (#robot-left#)</li>' +
+      '<li>#robot-port# 2 : #robot-color# (#robot-right#)</li>' +
+      '<li>#robot-port# 3 : #robot-ultrasonic#</li>' +
+      '<li>#robot-port# 4 : #robot-gyro#</li>' +
+      '<li>#robot-port# 5 : #robot-color# (#robot-arm#)</li>' +
       '</ul>',
     thumbnail: 'images/robots/crane.jpg',
 
@@ -1021,13 +1522,13 @@ var robotTemplates = [
       {
         type: 'ColorSensor',
         position: [-2, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
         type: 'ColorSensor',
         position: [2, -1, 9],
-        rotation: [Math.PI/2, 0, 0],
+        rotation: [Math.PI / 2, 0, 0],
         options: null
       },
       {
@@ -1086,7 +1587,7 @@ var robotTemplates = [
               {
                 type: 'ColorSensor',
                 position: [0, -1.25, 10],
-                rotation: [Math.PI/2, 0, 0],
+                rotation: [Math.PI / 2, 0, 0],
                 options: null
               }
             ]
@@ -1113,7 +1614,7 @@ var robotTemplates = [
     "bodyMass": 1000,
     "wheelMass": 200,
     "casterMass": 0,
-    "caster":true,
+    "caster": true,
     "wheelFriction": 10,
     "bodyFriction": 0,
     "casterFriction": 0,
@@ -1365,7 +1866,7 @@ var robotTemplates = [
       {
         "type": "MagnetActuator",
         "position": [0, -0.5, 7],
-        "rotation": [-Math.PI/2, 0, 0],
+        "rotation": [-Math.PI / 2, 0, 0],
         "options": {
           "maxRange": 20,
           "maxPower": 10000,
@@ -1375,7 +1876,7 @@ var robotTemplates = [
       {
         "type": "MagnetActuator",
         "position": [0, -0.5, -7],
-        "rotation": [Math.PI/2, 0, 0],
+        "rotation": [Math.PI / 2, 0, 0],
         "options": {
           "maxRange": 20,
           "maxPower": 10000,

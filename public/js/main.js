@@ -463,6 +463,8 @@ var main = new function() {
         tickIndex = 1;
       } else if (blockly.generator == pybricks_generator) {
         tickIndex = 2;
+      } else if (blockly.generator == spikeprime_generator) {
+        tickIndex = 0;
       }
       menuItems[tickIndex].html = '<span class="tick">&#x2713;</span> ' + menuItems[tickIndex].html;
 

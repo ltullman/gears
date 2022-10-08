@@ -24,7 +24,7 @@ var blockly = new function() {
   };
 
   this.unsaved = false;
-  this.generator = ev3dev2_generator;
+  this.generator = spikeprime_generator;
 
   this.mirror = true;
 

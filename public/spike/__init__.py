@@ -5,6 +5,11 @@ from ev3dev2.motor import MoveSteering, MoveTank
 from ev3dev2.motor import LargeMotor
 from ev3dev2.sensor.lego import GyroSensor, UltrasonicSensor
 from ev3dev2.sensor.lego import ColorSensor as Ev3ColorSensor
+from ev3dev2.sound import Sound as ev3Sound
+from ev3dev2.button import Button
+from ev3dev2.sensor.virtual import Radio
+from ev3dev2.sensor.virtual import GPSSensor
+from ev3dev2.sensor.virtual import Pen
 
 # Map Spike Prime ports to Ev3 ports.
 def map_port(port):
@@ -19,7 +24,7 @@ def map_port(port):
     elif port == 'G':
         return 'in3'
     else:
-        return None
+        return port
 
 def clip(n):
     n = n // 2
@@ -29,6 +34,12 @@ def clip(n):
         return 100
     else:
         return n
+
+class Sound(ev3Sound):
+    def __init__(self, address=None):
+        super().__init__(address)
+
+
 
 class MotionSensor:
     def __init__(self):
