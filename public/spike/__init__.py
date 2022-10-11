@@ -113,12 +113,23 @@ class MotorPair:
         self.steering_drive.on_for_degrees(
             steering=clip(steering), speed=clip(speed),
             degrees=(amount * 360 / (math.pi * self.wheel_width)))
-    def move_tank(self, amount, left_speed=None, right_speed=None):
+    #def move_tank(self, amount, left_speed=None, right_speed=None):
+    def move_tank(self,amount, unit='degrees', left_speed=None, right_speed=None):    
         left_speed = left_speed if left_speed is not None else self.default_speed
         right_speed = right_speed if right_speed is not None else self.default_speed
-        self.tank_drive.on_for_degrees(
-            left_speed=clip(left_speed), right_speed=clip(right_speed),
-            degrees=(amount * 360 / (math.pi * self.wheel_width)))
+
+        if ( unit == 'degrees' ):
+            self.tank_drive.on_for_degrees(
+                left_speed=clip(left_speed), right_speed=clip(right_speed),
+                degrees=(amount * 360 / (math.pi * self.wheel_width)))
+        elif ( unit == 'seconds'  ): 
+              self.tank_drive.on_for_seconds(
+                left_speed=clip(left_speed), right_speed=clip(right_speed),
+                seconds=(amount * 360 / (math.pi * self.wheel_width)))  
+        else: 
+              self.tank_drive.on_for_rotations(
+                left_speed=clip(left_speed), right_speed=clip(right_speed),
+                rotations=(amount * 360 / (math.pi * self.wheel_width)))  
     def stop(self):
         self.steering_drive.off(brake=self.brake)
 
