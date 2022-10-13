@@ -120,16 +120,16 @@ class MotorPair:
 
         if ( unit == 'degrees' ):
             self.tank_drive.on_for_degrees(
-                left_speed=clip(left_speed), right_speed=clip(right_speed),
-                degrees=(amount * 360 / (math.pi * self.wheel_width)))
+                left_speed=clip(left_speed), right_speed=clip(right_speed), degrees=amount)
+                #degrees=(amount * 360 / (math.pi * self.wheel_width)))
         elif ( unit == 'seconds'  ): 
               self.tank_drive.on_for_seconds(
                 left_speed=clip(left_speed), right_speed=clip(right_speed),
-                seconds=(amount * 360 / (math.pi * self.wheel_width)))  
+                seconds=(amount))  
         else: 
               self.tank_drive.on_for_rotations(
                 left_speed=clip(left_speed), right_speed=clip(right_speed),
-                rotations=(amount * 360 / (math.pi * self.wheel_width)))  
+                rotations=(amount))  
     def stop(self):
         self.steering_drive.off(brake=self.brake)
 
